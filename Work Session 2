@@ -1,0 +1,48 @@
+# 1/7/21; 7:41 PM - 9:00 PM
+# Dillon Anabi
+# Work Session 2
+
+# Euler Problem 1 Finished Code
+
+#create a function that finds all multiples of 3 and 5 within 1000
+#I used the remainder tool to list all numbers divisible by 3 or 5 and used the range tool to limit the range to 1000
+def prob1():
+	answer = sum(x for x in range(1000) if (x % 3 == 0 or x % 5 == 0))
+	return str(answer)
+
+if __name__ == "__main__":
+	print(prob1())
+
+#Euler Problem 2 Finished Code (Fibonacci Sequence)
+
+def fibSeq():
+	solut = 0
+	x = 1  # Start off with the first number in the fibonacci sequence, 1
+	y = 2  # Continue with the following number in the sequence, which is 2
+	# create while loop until the present number is equal to or less than 4 mil
+  while x <= 4000000:
+		#ensure the even numbers out of all fibonacci numbers
+    if x % 2 == 0:
+			solut = solut + x
+		# create a new definition for the following number in the sequence(1 to 2, 2 to 3, 3 to 5, etc;)
+    x, y = y, x + y
+	return str(solut)
+
+
+if __name__ == "__main__":
+	print(fibSeq())
+  
+  #Euler Problem 3 Code In Process(Largest Prime Factor)
+  
+ def lpf():
+	# define number that needs to be prime factors
+  n = 600851475143
+	# while loop until 
+  while True:
+		p = smallestPrimeFactor(n)
+		if p < n:
+			# integer division - //
+      n //= p
+		else:
+			return str(n)
+  
