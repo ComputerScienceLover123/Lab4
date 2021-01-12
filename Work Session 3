@@ -1,6 +1,6 @@
 #Dillon Anabi
 #1/11/21 5:29 PM - 6:50 PM
-''' This work session, I am mainly focusing on re structuring my problem 3 code, and continuing on with the following project euler problems '''
+''' This work session, I am mainly focusing on re structuring my problem 3 code'''
 
 #define number that needs to be prime factored
 n = 600851475143
@@ -17,3 +17,40 @@ while x <= n /x:
     x = x + 1
     
 print (primeFact)
+---------------------------------------------------------
+'''I erased my initial work for the problem 3 code because I thought it was too complex for no reason. I restructured and started to make psuedocode diagram on patterns on 
+finding prime numbers. From there, I started slowly working my psuedocode into my code. What was different from my previous code was that I incorporated both the example number 
+and the problem number in my code in order to test the successfullness for both. Using both numbers, specifically one that was already solved, instead of only using the problem 
+number, allowed me to more easily find patterns and helped me develop my code much easier.  '''
+#Number given in Example
+number1 = 13195
+
+#Iterator. I started off with 2 because 1 and the number are not counted as prime factors
+i1 = 2
+
+''' While loop for iterating. This while loop basically checks every number and sees if it the number is divisible by i1. For example, in number1, once i1 gets to
+5, which is a number that can divide 13195 evenly, number1 now equals to 2639 (13195/5). i1 now resets back to 1 again and does this same process with 2639. And 
+so forth. '''
+while i1 < number1:
+	if number1 % i1 == 0:
+		number1 = number1/i1
+		i1 = 1
+	i1 = i1 + 1
+
+#Print the largest prime factor
+print (number1)
+
+#Number given in the question
+number2 = 600851475143
+
+#Iterator for the question
+i2 = 2
+
+# While loop for iterating
+while i2 < number2:
+ 	if number2 % i2 == 0:
+ 		number2 = number2/i2
+ 		i2 =  i2 - 1
+ 	i2 = i2 + 1
+
+print (number2)
