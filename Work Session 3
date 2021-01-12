@@ -1,0 +1,19 @@
+#Dillon Anabi
+#1/11/21 5:29 PM - 6:50 PM
+''' This work session, I am mainly focusing on re structuring my problem 3 code, and continuing on with the following project euler problems '''
+
+#define number that needs to be prime factored
+n = 600851475143
+#kind of like a counter, starting off with the first prime factor.
+primeFact = 1
+#mainly used to test if certain numbers are in fact prime
+x = 2
+
+while x <= n /x:
+  if number %x == 0:
+    primeFact = x
+    number /= x
+  else: 
+    x = x + 1
+    
+print (primeFact)
