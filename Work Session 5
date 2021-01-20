@@ -1,0 +1,21 @@
+#Dillon Anabi
+#January 19th, 7:30 PM - 8:20 PM
+
+#Proj Euler #9
+def pythagTrip():
+	# if a + b + c = 1000 then 1000 is the perimeter of the triangle
+  perimeter = 1000
+	# Create a for loop for the variable a, checking any number from 1 to 1000 
+  for a in range(1, perimeter + 1):
+		# Create a for loop for the variable b, checking any number from 1 to 1000 
+    for b in range(a + 1, perimeter + 1):
+			#after a and b are found, c can be found
+      c = perimeter - a - b
+			# type out pythag equation
+      if a * a + b * b == c * c:
+				# It is now implied that b < c, because we have a > 0
+				return str(a * b * c)
+
+
+if __name__ == "__main__":
+	print(pythagTrip())
