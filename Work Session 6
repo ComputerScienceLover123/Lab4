@@ -1,0 +1,19 @@
+# Dillon Anabi
+# January 21 2021 10:00 PM - 11:04 PM
+
+# Project Euler Problem 4
+# Define palindromic function
+def palindromic():
+	# for loop that goes through every three digit number from 100 - 1000
+  # multiply i and j respectively and test if they are a palindromic number and keep going until the code finds the largest
+  solution = max(i * j
+		for i in range(100, 1000)
+		for j in range(100, 1000)
+		# make if statement testing if the multiplied number is the largest palindromic sequence.
+    if str(i * j) == str(i * j)[ : : -1])
+	
+  return str(solution)
+
+
+if __name__ == "__main__":
+	print(palindromic())
